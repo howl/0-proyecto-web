@@ -84,7 +84,7 @@ main>nav {
   position: sticky;
   top: 10px;
   padding: 10px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 15px;
   backdrop-filter: blur(10px) brightness(70%);
 }
@@ -101,11 +101,11 @@ main>nav>ul {
   overflow: auto;
   margin: 0;
   padding: 0;
-  border: 1px solid dimgrey;
+  /* border: 1px solid dimgrey; */
   border-radius: 15px;
   /* background-color: grey;
   background-image: linear-gradient(to bottom, lightgrey, grey); */
-  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.5), rgba(128, 128, 128, 0.5));
+  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
   list-style: none;
   font-family: Cantarell, sans-serif;
 }
@@ -125,8 +125,10 @@ main>nav>ul>li:last-child {
 main>nav>ul>li>a {
   display: block;
   padding: 10px;
-  border-left: 1px solid white;
-  border-right: 1px solid black;
+  /* border-left: 1px solid white;
+  border-right: 1px solid black; */
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
   text-decoration: none;
   text-align: center;
   text-shadow: 1px 1px 2px white;
@@ -146,7 +148,7 @@ main>nav>ul>li:last-child>a {
 main>nav>ul>li>a:hover {
   /* background-color: lightgrey;
   background-image: linear-gradient(to bottom, white, darkgrey); */
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(169, 169, 169, 0.5));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(169, 169, 169, 0.4));
   /* color: dimgray; */
   cursor: cell;
 }
@@ -164,9 +166,9 @@ footer {
   position: sticky;
   bottom: 5px;
   padding: 5px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 10px;
-  backdrop-filter: blur(10px) brightness(75%);
+  backdrop-filter: blur(10px) brightness(70%);
   font-size: 0.8em;
   text-shadow: 1px 1px 2px black;
   color: white;
@@ -175,7 +177,7 @@ footer {
 footer>p {
   margin: 0;
   padding: 2px;
-  border: 1px solid dimgrey;
+  /* border: 1px solid dimgrey; */
   border-radius: 10px;
-  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.5), rgba(128, 128, 128, 0.5));
+  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
 }
