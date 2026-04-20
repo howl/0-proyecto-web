@@ -17,13 +17,12 @@ header>nav>ul {
   /* Si no le hago display table me
      inserta unos espacio en blanco
      entre los elementos. */
-  display: table;
+  /* Con table solo con webkit no pone
+     los espacios. Con flex paerece que
+     lo hace bien en todos.*/
+  display: flex;
   list-style: none;
   padding: 0;
-}
-
-header>nav>ul>li {
-  display: inline-block;
 }
 
 header>nav>ul>li>a {
