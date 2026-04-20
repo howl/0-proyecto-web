@@ -143,12 +143,14 @@ main>nav>ul>li>a:hover {
   background-color: lightgrey;
   background-image: linear-gradient(to bottom, white, darkgrey);
   /* color: dimgrey; */
+  cursor: cell;
 }
 
 main>nav>ul>li>a.selected {
   background-color: darkgrey;
   background-image: linear-gradient(to bottom, grey, darkgrey);
   color: white;
+  cursor: default;
 }
 
 main {
