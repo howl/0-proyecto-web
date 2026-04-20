@@ -1,22 +1,58 @@
 * {
-  /* border: 0; */
   margin: 0;
-  /* padding: 0; */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
+header>nav {
+  display: inline-block;
+  border: 1px solid dimgrey;
+  border-radius: 15px;
+  background-color: lightgray;
+  background-image: linear-gradient(to bottom, lightgrey, grey);
+}
+
 header>nav>ul {
-  border: 1px solid black;
-  padding: 10px;
+  /* Si no le hago display table me
+     inserta unos espacio en blanco
+     entre los elementos. */
+  display: table;
+  list-style: none;
+  padding: 0;
 }
 
 header>nav>ul>li {
-  display: inline;
-  border: 1px solid grey;
+  display: inline-block;
 }
 
-header>nav>ul>li:not(:last-child) {
-  margin-right: 15px;
+header>nav>ul>li>a {
+  display: block;
+  color: black;
+  border-left: 1px solid white;
+  border-right: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+header>nav>ul>li:first-child>a {
+  border-radius: 15px 0 0 15px;
+  border-left: none;
+}
+
+header>nav>ul>li:last-child>a {
+  border-radius: 0 15px 15px 0;
+  border-right: none;
+}
+
+header>nav>ul>li>a:hover {
+  background-color: grey;
+  background-image: linear-gradient(to bottom, white, darkgrey);
+  color: dimgrey;
+}
+
+header>nav>ul>li>a.selected {
+  background-color: grey;
+  background-image: linear-gradient(to bottom, grey, darkgrey);
+  color: white;
 }
