@@ -48,10 +48,6 @@ body {
   margin: 0;
 }
 
-main {
-  margin: 10px;
-}
-
 h1 {
   margin: 0;
   padding: 10px;
@@ -73,15 +69,25 @@ header {
   background-image: linear-gradient(to bottom, darkgrey, white);
 }
 
+main {
+  margin: 10px;
+  font-family: Cantarell, sans-serif;
+}
+
+main img,
+main video {
+  width: 100%;
+}
+
 main>nav {
   position: sticky;
   top: 10px;
-  backdrop-filter: blur(10px) brightness(75%);
   padding: 10px;
   border: 1px solid white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-radius: 15px;
+  backdrop-filter: blur(10px) brightness(75%);
 }
 
 main>nav>ul {
@@ -94,57 +100,53 @@ main>nav>ul {
   display: flex;
   /* flex-direction: column; */
   overflow: auto;
-  list-style: none;
   margin: 0;
   padding: 0;
   border: 1px solid dimgrey;
   border-radius: 15px;
   background-color: grey;
   background-image: linear-gradient(to bottom, lightgrey, grey);
+  list-style: none;
   font-family: Cantarell, sans-serif;
 }
 
 main>nav>ul>li {
   flex-grow: 1;
-  /* border-top: 1px solid white;
-  border-bottom: 1px solid white; */
 }
 
 main>nav>ul>li:first-child {
-  /* border-left: 1px solid white; */
   border-radius: 15px 0 0 15px;
 }
 
 main>nav>ul>li:last-child {
-  /* border-right: 1px solid white; */
   border-radius: 0 15px 15px 0;
 }
 
 main>nav>ul>li>a {
   display: block;
-  color: black;
+  padding: 10px;
   border-left: 1px solid white;
   border-right: 1px solid black;
-  padding: 10px;
   text-decoration: none;
   text-align: center;
   text-shadow: 1px 1px 2px white;
+  color: black;
 }
 
 main>nav>ul>li:first-child>a {
-  border-radius: 15px 0 0 15px;
   border-left: none;
+  border-radius: 15px 0 0 15px;
 }
 
 main>nav>ul>li:last-child>a {
-  border-radius: 0 15px 15px 0;
   border-right: none;
+  border-radius: 0 15px 15px 0;
 }
 
 main>nav>ul>li>a:hover {
   background-color: lightgrey;
   background-image: linear-gradient(to bottom, white, darkgrey);
-  /* color: dimgrey; */
+  color: dimgray;
   cursor: cell;
 }
 
@@ -152,15 +154,6 @@ main>nav>ul>li>a.selected {
   background-color: darkgrey;
   background-image: linear-gradient(to bottom, grey, darkgrey);
   color: white;
-  cursor: default;
   text-shadow: 1px 1px 2px black;
-}
-
-main {
-  font-family: Cantarell, sans-serif;
-}
-
-main img,
-main video {
-  width: 100%;
+  cursor: default;
 }
