@@ -86,7 +86,7 @@ main>nav {
   padding: 10px;
   border: 1px solid white;
   border-radius: 15px;
-  backdrop-filter: blur(10px) brightness(75%);
+  backdrop-filter: blur(10px) brightness(70%);
 }
 
 main>nav>ul {
@@ -174,4 +174,8 @@ footer {
 
 footer>p {
   margin: 0;
+  padding: 2px;
+  border: 1px solid dimgrey;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.5), rgba(128, 128, 128, 0.5));
 }
