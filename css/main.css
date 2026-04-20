@@ -103,8 +103,9 @@ main>nav>ul {
   padding: 0;
   border: 1px solid dimgrey;
   border-radius: 15px;
-  background-color: grey;
-  background-image: linear-gradient(to bottom, lightgrey, grey);
+  /* background-color: grey;
+  background-image: linear-gradient(to bottom, lightgrey, grey); */
+  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.5), rgba(128, 128, 128, 0.5));
   list-style: none;
   font-family: Cantarell, sans-serif;
 }
@@ -143,15 +144,17 @@ main>nav>ul>li:last-child>a {
 }
 
 main>nav>ul>li>a:hover {
-  background-color: lightgrey;
-  background-image: linear-gradient(to bottom, white, darkgrey);
-  color: dimgray;
+  /* background-color: lightgrey;
+  background-image: linear-gradient(to bottom, white, darkgrey); */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(169, 169, 169, 0.5));
+  /* color: dimgray; */
   cursor: cell;
 }
 
 main>nav>ul>li>a.selected {
-  background-color: darkgrey;
-  background-image: linear-gradient(to bottom, grey, darkgrey);
+  /* background-color: darkgrey;
+  background-image: linear-gradient(to bottom, grey, darkgrey); */
+  background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.5), rgba(169, 169, 169, 0.5));
   color: white;
   text-shadow: 1px 1px 2px black;
   cursor: default;
