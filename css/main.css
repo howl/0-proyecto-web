@@ -39,10 +39,19 @@
 }
 
 * {
-  /* margin: 0; */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 h1,
@@ -54,14 +63,25 @@ h6 {
   font-family: Comfortaa, sans-serif;
 }
 
-header>nav {
-  border: 1px solid dimgrey;
-  border-radius: 15px;
-  background-color: grey;
-  background-image: linear-gradient(to bottom, lightgrey, grey);
+header {
+  position: relative;
+  background-color: lightgrey;
+  background-image: linear-gradient(to bottom, darkgrey, white);
 }
 
-header>nav>ul {
+main>nav {
+  position: sticky;
+  top: 10px;
+  backdrop-filter: blur(10px) brightness(75%);
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-radius: 15px;
+}
+
+main>nav>ul {
   /* Si no le hago display table me
      inserta unos espacio en blanco
      entre los elementos. */
@@ -70,20 +90,33 @@ header>nav>ul {
      lo hace bien en todos.*/
   display: flex;
   /* flex-direction: column; */
-  /* width: 100%; */
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid white;
+  border: 1px solid dimgrey;
   border-radius: 15px;
+  background-color: grey;
+  background-image: linear-gradient(to bottom, lightgrey, grey);
   font-family: Cantarell, sans-serif;
 }
 
-header>nav>ul>li {
+main>nav>ul>li {
   flex-grow: 1;
+  /* border-top: 1px solid white;
+  border-bottom: 1px solid white; */
 }
 
-header>nav>ul>li>a {
+main>nav>ul>li:first-child {
+  /* border-left: 1px solid white; */
+  border-radius: 15px 0 0 15px;
+}
+
+main>nav>ul>li:last-child {
+  /* border-right: 1px solid white; */
+  border-radius: 0 15px 15px 0;
+}
+
+main>nav>ul>li>a {
   display: block;
   color: black;
   border-left: 1px solid white;
@@ -93,23 +126,23 @@ header>nav>ul>li>a {
   text-align: center;
 }
 
-header>nav>ul>li:first-child>a {
+main>nav>ul>li:first-child>a {
   border-radius: 15px 0 0 15px;
   border-left: none;
 }
 
-header>nav>ul>li:last-child>a {
+main>nav>ul>li:last-child>a {
   border-radius: 0 15px 15px 0;
   border-right: none;
 }
 
-header>nav>ul>li>a:hover {
+main>nav>ul>li>a:hover {
   background-color: lightgrey;
   background-image: linear-gradient(to bottom, white, darkgrey);
   /* color: dimgrey; */
 }
 
-header>nav>ul>li>a.selected {
+main>nav>ul>li>a.selected {
   background-color: darkgrey;
   background-image: linear-gradient(to bottom, grey, darkgrey);
   color: white;
@@ -117,4 +150,9 @@ header>nav>ul>li>a.selected {
 
 main {
   font-family: Cantarell, sans-serif;
+}
+
+main img,
+main video {
+  width: 100%;
 }
