@@ -9,8 +9,8 @@ header>nav {
   display: inline-block;
   border: 1px solid dimgrey;
   border-radius: 15px;
-  background-color: lightgray;
-  background-image: linear-gradient(to bottom, lightgrey, grey);
+  background-color: gray;
+  /* background-image: linear-gradient(to bottom, lightgrey, grey); */
 }
 
 header>nav>ul {
@@ -46,13 +46,13 @@ header>nav>ul>li:last-child>a {
 }
 
 header>nav>ul>li>a:hover {
-  background-color: grey;
-  background-image: linear-gradient(to bottom, white, darkgrey);
-  color: dimgrey;
+  background-color: lightgrey;
+  /* background-image: linear-gradient(to bottom, white, darkgrey); */
+  /* color: dimgrey; */
 }
 
 header>nav>ul>li>a.selected {
-  background-color: grey;
-  background-image: linear-gradient(to bottom, grey, darkgrey);
+  background-color: darkgrey;
+  /* background-image: linear-gradient(to bottom, grey, darkgrey); */
   color: white;
 }
