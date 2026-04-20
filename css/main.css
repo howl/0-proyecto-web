@@ -69,7 +69,8 @@ header {
   background-image: linear-gradient(to bottom, darkgrey, white);
 }
 
-main {
+main,
+footer {
   margin: 10px;
   font-family: Cantarell, sans-serif;
 }
@@ -156,4 +157,20 @@ main>nav>ul>li>a.selected {
   color: white;
   text-shadow: 1px 1px 2px black;
   cursor: default;
+}
+
+footer {
+  position: sticky;
+  bottom: 5px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur(10px) brightness(75%);
+  font-size: 0.8em;
+  text-shadow: 1px 1px 2px black;
+  color: white;
+}
+
+footer>p {
+  margin: 0;
 }
