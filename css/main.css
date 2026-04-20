@@ -70,6 +70,7 @@ header {
   background-image: linear-gradient(to bottom, darkgrey, white);
 }
 
+nav,
 main,
 footer {
   margin: 10px;
@@ -81,7 +82,7 @@ main video {
   width: 100%;
 }
 
-main>nav {
+nav {
   position: sticky;
   top: 10px;
   padding: 10px;
@@ -90,7 +91,7 @@ main>nav {
   backdrop-filter: blur(10px) brightness(70%);
 }
 
-main>nav>ul {
+nav>ul {
   /* Si no le hago display table me
      inserta unos espacio en blanco
      entre los elementos. */
@@ -98,65 +99,44 @@ main>nav>ul {
      los espacios. Con flex paerece que
      lo hace bien en todos.*/
   display: flex;
-  /* flex-direction: column; */
   overflow: auto;
   margin: 0;
   padding: 0;
   /* border: 1px solid dimgrey; */
   border-radius: 15px;
-  /* background-color: grey;
-  background-image: linear-gradient(to bottom, lightgrey, grey); */
-  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
   list-style: none;
-  font-family: Cantarell, sans-serif;
 }
 
-main>nav>ul>li {
+nav>ul>li {
   flex-grow: 1;
 }
 
-main>nav>ul>li:first-child {
-  border-radius: 15px 0 0 15px;
-}
-
-main>nav>ul>li:last-child {
-  border-radius: 0 15px 15px 0;
-}
-
-main>nav>ul>li>a {
+nav>ul>li>a {
   display: block;
   padding: 10px;
-  /* border-left: 1px solid white;
-  border-right: 1px solid black; */
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   text-decoration: none;
   text-align: center;
   text-shadow: 1px 1px 2px white;
   color: black;
+  background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
 }
 
-main>nav>ul>li:first-child>a {
+nav>ul>li:first-child>a {
   border-left: none;
-  border-radius: 15px 0 0 15px;
 }
 
-main>nav>ul>li:last-child>a {
+nav>ul>li:last-child>a {
   border-right: none;
-  border-radius: 0 15px 15px 0;
 }
 
-main>nav>ul>li>a:hover {
-  /* background-color: lightgrey;
-  background-image: linear-gradient(to bottom, white, darkgrey); */
+nav>ul>li>a:hover {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(169, 169, 169, 0.4));
-  /* color: dimgray; */
   cursor: cell;
 }
 
-main>nav>ul>li>a.selected {
-  /* background-color: darkgrey;
-  background-image: linear-gradient(to bottom, grey, darkgrey); */
+nav>ul>li>a.selected {
   background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.5), rgba(169, 169, 169, 0.5));
   color: white;
   text-shadow: 1px 1px 2px black;
@@ -181,4 +161,44 @@ footer>p {
   /* border: 1px solid dimgrey; */
   border-radius: 10px;
   background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  header,
+  footer {
+    width: 100%;
+  }
+
+  main {
+    flex-grow: 1;
+    width: calc(100% - 240px);
+  }
+
+  nav {
+    width: 200px;
+  }
+
+  nav>ul {
+    flex-direction: column;
+  }
+
+  nav>ul>li>a {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 0;
+    border-right: 0;
+  }
+
+  nav>ul>li:first-child>a {
+    border-top: none;
+  }
+
+  nav>ul>li:last-child>a {
+    border-bottom: none;
+  }
 }
