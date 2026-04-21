@@ -47,6 +47,8 @@
 body {
   margin: 0;
   display: flex;
+  /* No le doy la posibilidad de wrap porque en tamaños muy reducidos
+     falla. Se lo pongo en media query para tamaños superiores. */
   flex-direction: column;
 }
 
