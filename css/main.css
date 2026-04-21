@@ -127,10 +127,14 @@ nav>ul>li>a {
 
 nav>ul>li:first-child>a {
   border-left: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 nav>ul>li:last-child>a {
   border-right: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 nav>ul>li>a:hover {
@@ -198,9 +202,13 @@ footer>p {
 
   nav>ul>li:first-child>a {
     border-top: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
   }
 
   nav>ul>li:last-child>a {
     border-bottom: none;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
   }
 }
