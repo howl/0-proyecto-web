@@ -81,6 +81,15 @@ footer {
   font-family: Cantarell, sans-serif;
 }
 
+main {
+  padding: 10px;
+  /* border: 1px solid white; */
+  border-radius: 15px;
+  backdrop-filter: blur(20px) brightness(70%);
+  text-shadow: 1px 1px 2px black;
+  color: white;
+}
+
 main img,
 main video {
   width: 100%;
@@ -92,7 +101,7 @@ nav {
   padding: 10px;
   /* border: 1px solid white; */
   border-radius: 15px;
-  backdrop-filter: blur(10px) brightness(70%);
+  backdrop-filter: blur(20px) brightness(70%);
 }
 
 nav>ul {
@@ -157,7 +166,7 @@ footer {
   padding: 5px;
   /* border: 1px solid white; */
   border-radius: 10px;
-  backdrop-filter: blur(10px) brightness(70%);
+  backdrop-filter: blur(20px) brightness(70%);
   font-size: 0.8em;
   text-shadow: 1px 1px 2px black;
   color: white;
