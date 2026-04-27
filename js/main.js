@@ -1,8 +1,6 @@
-const addPageStructure = (() => {
-  console.log(document.URL);
-  console.log(document.baseURI);
-  console.log(document.location.pathname)
+'use strict';
 
+const addPageStructure = (() => {
   const headNode = document.createElement('header');
   headNode.classList.add('transparentBox');
   const headNodeHeader = document.createElement('h1');
