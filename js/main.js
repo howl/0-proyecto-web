@@ -4,7 +4,7 @@ const addPageStructure = (() => {
   const headNode = document.createElement('header');
   headNode.classList.add('transparentBox');
   const headNodeHeader = document.createElement('h1');
-  headNodeHeader.textContent = 'Texto de la cabecera';
+  headNodeHeader.textContent = document.querySelector('head>title').textContent.split(' - ')[0];
   headNode.appendChild(headNodeHeader);
 
   const navNode = document.createElement('nav');
