@@ -52,6 +52,8 @@ body {
   /* No le doy la posibilidad de wrap porque en tamaños muy reducidos
      falla. Se lo pongo en media query para tamaños superiores. */
   flex-direction: column;
+  text-shadow: 1px 1px 2px black;
+  color: white;
 }
 
 h1 {
@@ -73,7 +75,6 @@ header {
   text-shadow:
     1px 1px 2px black,
     1px 1px 6px black;
-  color: white;
 }
 
 nav,
@@ -83,19 +84,14 @@ footer {
   font-family: Cantarell, sans-serif;
 }
 
-main {
-  text-shadow: 1px 1px 2px black;
-  color: white;
-}
-
 main img,
 main video {
   width: 100%;
 }
 
-nav {
+#leftBar {
   position: sticky;
-  top: 10px;
+  top: 0;
   z-index: 1;
 }
 
@@ -159,8 +155,6 @@ footer {
   position: sticky;
   bottom: 5px;
   font-size: 0.8em;
-  text-shadow: 1px 1px 2px black;
-  color: white;
 }
 
 footer>p {
@@ -181,8 +175,8 @@ footer>p {
 .solidBox {
   margin: 10px;
   padding: 10px;
-  background-color: #ffffff33;
-  border: 1px solid #ffffff66;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
 }
 
@@ -213,12 +207,12 @@ footer>p {
   }
 
   main {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: calc(100% - 240px);
   }
 
-  nav {
-    width: 200px;
+  #leftBar {
+    width: 220px;
   }
 
   nav>ul {
