@@ -175,7 +175,30 @@ footer>p {
   margin: 10px;
   padding: 10px;
   border-radius: 15px;
-  backdrop-filter: blur(30px) brightness(70%);
+  backdrop-filter: blur(15px) brightness(70%);
+}
+
+.solidBox {
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff33;
+  border: 1px solid #ffffff66;
+  border-radius: 15px;
+}
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flexItem {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .flexItem {
+    flex-basis: calc(50% - 20px);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -219,5 +242,17 @@ footer>p {
     border-bottom: none;
     border-top-right-radius: 0;
     border-bottom-left-radius: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .flexItem {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .flexItem {
+    flex-basis: calc(25% - 20px);
   }
 }

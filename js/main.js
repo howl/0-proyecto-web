@@ -15,6 +15,7 @@ const addPageStructure = (() => {
     { nombre: 'Inicio', enlace: '/index.html', },
     { nombre: 'Biografia', enlace: '/pages/biografia.html', },
     { nombre: 'Portfolio', enlace: '/pages/portfolio.html', },
+    { nombre: 'Galería', enlace: '/pages/galeria.html', },
     { nombre: 'Contacto', enlace: '/pages/contacto.html', },
   ];
   navLinks.forEach((navLink) => {
