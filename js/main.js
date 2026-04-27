@@ -1,4 +1,8 @@
 const addPageStructure = (() => {
+  console.log(document.URL);
+  console.log(document.baseURI);
+  console.log(document.location.pathname)
+
   const headNode = document.createElement('header');
   headNode.classList.add('transparentBox');
   const headNodeHeader = document.createElement('h1');
@@ -9,42 +13,23 @@ const addPageStructure = (() => {
   navNode.classList.add('transparentBox');
   const navNodeUl = document.createElement('ul');
   navNode.appendChild(navNodeUl);
-  const navNodeLi = [];
-  const navNodeLiA = [];
-  // TODO: Mejorar esto con un array con nombres y urls.
-  navNodeLi[0] = document.createElement('li');
-  navNodeLiA[0] = document.createElement('a');
-  navNodeLiA[0].href = '/index.html';
-  navNodeLiA[0].textContent = 'Inicio';
-  navNodeLi[0].appendChild(navNodeLiA[0]);
-  navNodeUl.appendChild(navNodeLi[0]);
-  navNodeLi[1] = document.createElement('li');
-  navNodeLiA[1] = document.createElement('a');
-  navNodeLiA[1].href = '/pages/biografia.html';
-  navNodeLiA[1].textContent = 'Biografía';
-  navNodeLi[1].appendChild(navNodeLiA[1]);
-  navNodeUl.appendChild(navNodeLi[1]);
-  navNodeLi[2] = document.createElement('li');
-  navNodeLiA[2] = document.createElement('a');
-  navNodeLiA[2].href = '/pages/portfolio.html';
-  navNodeLiA[2].textContent = 'Portfolio';
-  navNodeLi[2].appendChild(navNodeLiA[2]);
-  navNodeUl.appendChild(navNodeLi[2]);
-  navNodeLi[3] = document.createElement('li');
-  navNodeLiA[3] = document.createElement('a');
-  navNodeLiA[3].href = '/pages/contacto.html';
-  navNodeLiA[3].textContent = 'Contacto';
-  navNodeLi[3].appendChild(navNodeLiA[3]);
-  navNodeUl.appendChild(navNodeLi[3]);
-
-  // <nav class="transparentBox">
-  //   <ul>
-  //     <li><a href="../index.html">Inicio</a></li>
-  //     <li><a class="selected">Biografía</a></li>
-  //     <li><a href="portfolio.html">Portfolio</a></li>
-  //     <li><a href="contacto.html">Contacto</a></li>
-  //   </ul>
-  // </nav>
+  const navLinks = [
+    { nombre: 'Inicio', enlace: '/index.html', },
+    { nombre: 'Biografia', enlace: '/pages/biografia.html', },
+    { nombre: 'Portfolio', enlace: '/pages/portfolio.html', },
+    { nombre: 'Contacto', enlace: '/pages/contacto.html', },
+  ];
+  navLinks.forEach((navLink) => {
+    const navNodeLi = document.createElement('li');
+    const navNodeLiA = document.createElement('a');
+    if (navLink.enlace !== document.location.pathname)
+      navNodeLiA.href = navLink.enlace;
+    else
+      navNodeLiA.classList.add('selected');
+    navNodeLiA.textContent = navLink.nombre;
+    navNodeLi.appendChild(navNodeLiA);
+    navNodeUl.appendChild(navNodeLi);
+  });
 
   const footNode = document.createElement('footer');
   footNode.classList.add('transparentBox');
