@@ -70,9 +70,6 @@ h6 {
 }
 
 header {
-  padding: 10px;
-  border-radius: 15px;
-  backdrop-filter: blur(30px) brightness(70%);
   text-shadow:
     1px 1px 2px black,
     1px 1px 6px black;
@@ -83,15 +80,10 @@ nav,
 header,
 main,
 footer {
-  margin: 10px;
   font-family: Cantarell, sans-serif;
 }
 
 main {
-  padding: 10px;
-  /* border: 1px solid white; */
-  border-radius: 15px;
-  backdrop-filter: blur(30px) brightness(70%);
   text-shadow: 1px 1px 2px black;
   color: white;
 }
@@ -104,10 +96,6 @@ main video {
 nav {
   position: sticky;
   top: 10px;
-  padding: 10px;
-  /* border: 1px solid white; */
-  border-radius: 15px;
-  backdrop-filter: blur(30px) brightness(70%);
   z-index: 1;
 }
 
@@ -170,10 +158,6 @@ nav>ul>li>a.selected {
 footer {
   position: sticky;
   bottom: 5px;
-  padding: 5px;
-  /* border: 1px solid white; */
-  border-radius: 10px;
-  backdrop-filter: blur(30px) brightness(70%);
   font-size: 0.8em;
   text-shadow: 1px 1px 2px black;
   color: white;
@@ -185,6 +169,13 @@ footer>p {
   /* border: 1px solid dimgrey; */
   border-radius: 10px;
   background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
+}
+
+.transparentBox {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(30px) brightness(70%);
 }
 
 @media screen and (min-width: 768px) {
