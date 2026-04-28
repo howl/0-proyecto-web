@@ -8,6 +8,7 @@ const addPageStructure = (() => {
   headNode.appendChild(headNodeHeader);
 
   const navNode = document.createElement('nav');
+  navNode.id = 'principalNav';
   navNode.classList.add('transparentBox');
   const navNodeUl = document.createElement('ul');
   navNode.appendChild(navNodeUl);
@@ -31,16 +32,12 @@ const addPageStructure = (() => {
   });
 
   const asideNode = document.createElement('aside');
+  asideNode.id = 'publicidad';
   asideNode.classList.add('transparentBox');
   const asideNodeP = document.createElement('p');
   asideNodeP.classList.add('solidBox');
   asideNodeP.innerHTML = 'Espacio publicitario:<br>Spray repelente de cuñados<br>Aire de la sierra';
   asideNode.appendChild(asideNodeP);
-
-  const leftBar = document.createElement('div');
-  leftBar.id = 'leftBar';
-  leftBar.appendChild(navNode);
-  leftBar.appendChild(asideNode);
 
   const footNode = document.createElement('footer');
   footNode.classList.add('transparentBox');
@@ -50,6 +47,7 @@ const addPageStructure = (() => {
 
   const mainNode = document.querySelector('main');
   mainNode.parentNode.insertBefore(headNode, mainNode);
-  mainNode.parentNode.insertBefore(leftBar, mainNode);
+  mainNode.parentNode.insertBefore(asideNode, mainNode);
+  mainNode.parentNode.insertBefore(navNode, mainNode);
   mainNode.parentNode.insertBefore(footNode, mainNode.nextSibling);
 })();

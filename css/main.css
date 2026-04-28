@@ -89,13 +89,17 @@ main video {
   width: 100%;
 }
 
-#leftBar {
+main aside {
+  display: none;
+}
+
+#principalNav {
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 1;
 }
 
-nav>ul {
+#principalNav>ul {
   /* Si no le hago display table me
      inserta unos espacio en blanco
      entre los elementos. */
@@ -111,11 +115,11 @@ nav>ul {
   list-style: none;
 }
 
-nav>ul>li {
+#principalNav>ul>li {
   flex-grow: 1;
 }
 
-nav>ul>li>a {
+#principalNav>ul>li>a {
   display: block;
   padding: 10px;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -127,24 +131,24 @@ nav>ul>li>a {
   background-image: linear-gradient(to bottom, rgba(211, 211, 211, 0.7), rgba(128, 128, 128, 0.7));
 }
 
-nav>ul>li:first-child>a {
+#principalNav>ul>li:first-child>a {
   border-left: none;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
-nav>ul>li:last-child>a {
+#principalNav>ul>li:last-child>a {
   border-right: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-nav>ul>li>a:hover {
+#principalNav>ul>li>a:hover {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(169, 169, 169, 0.4));
   cursor: cell;
 }
 
-nav>ul>li>a.selected {
+#principalNav>ul>li>a.selected {
   background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.5), rgba(169, 169, 169, 0.5));
   color: white;
   text-shadow: 1px 1px 2px black;
@@ -202,37 +206,38 @@ footer>p {
   }
 
   header,
-  footer {
-    width: 100%;
+  footer,
+  #publicidad {
+    flex-basis: 100%;
   }
 
   main {
     /* flex-grow: 1; */
-    width: calc(100% - 240px);
+    flex-basis: calc(100% - 240px);
   }
 
-  #leftBar {
-    width: 220px;
+  #principalNav {
+    flex-basis: 200px;
   }
 
-  nav>ul {
+  #principalNav>ul {
     flex-direction: column;
   }
 
-  nav>ul>li>a {
+  #principalNav>ul>li>a {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     border-left: 0;
     border-right: 0;
   }
 
-  nav>ul>li:first-child>a {
+  #principalNav>ul>li:first-child>a {
     border-top: none;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 0;
   }
 
-  nav>ul>li:last-child>a {
+  #principalNav>ul>li:last-child>a {
     border-bottom: none;
     border-top-right-radius: 0;
     border-bottom-left-radius: 15px;
@@ -240,12 +245,18 @@ footer>p {
 }
 
 @media screen and (min-width: 1024px) {
+  main aside {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .flexItem {
     flex-basis: calc(33.33% - 20px);
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .flexItem {
     flex-basis: calc(25% - 20px);
   }
