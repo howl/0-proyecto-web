@@ -56,6 +56,18 @@ body {
   color: white;
 }
 
+a {
+  color: deepskyblue;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:visited {
+  color: orchid;
+}
+
 h1 {
   margin: 0;
   padding: 10px;
@@ -87,6 +99,20 @@ footer {
 main img,
 main video {
   width: 100%;
+}
+
+main figure {
+  margin: 5px;
+  padding: 10px;
+  /* max-width: 30%;
+  max-height: 20dvh; */
+  border: 1px dotted white;
+  border-radius: 15px;
+}
+
+main figure img {
+  max-width: 15dvw;
+  max-height: 10dvh;
 }
 
 main aside {
@@ -212,8 +238,12 @@ footer>p {
   }
 
   main {
-    /* flex-grow: 1; */
     flex-basis: calc(100% - 240px);
+  }
+
+  main article figure {
+    float: right;
+    clear: right;
   }
 
   #principalNav {
@@ -245,8 +275,18 @@ footer>p {
 }
 
 @media screen and (min-width: 1024px) {
+
+  main section {
+    float: left;
+    width: 75%;
+    padding-right: 10px;
+    border-right: 1px dashed white;
+  }
+
   main aside {
-    display: block;
+    display: inline-block;
+    width: calc(25% - 20px);
+    padding: 10px;
   }
 }
 
