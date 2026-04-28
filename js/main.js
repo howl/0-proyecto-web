@@ -42,7 +42,8 @@ const addPageStructure = (() => {
   const footNode = document.createElement('footer');
   footNode.classList.add('transparentBox');
   const footNodeP = document.createElement('p');
-  footNodeP.textContent = '© 2026 David Santamaría Rogado.';
+  /* Uso innerHTML porque textContent no interpreta HTML entities. */
+  footNodeP.innerHTML = '&copy; 2026 David Santamaría Rogado.';
   footNode.appendChild(footNodeP);
 
   const mainNode = document.querySelector('main');
