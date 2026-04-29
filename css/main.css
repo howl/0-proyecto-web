@@ -102,7 +102,7 @@ main video {
 }
 
 main figure {
-  display: inline-block;
+  /* display: inline-block; */
   margin: 5px;
   padding: 10px;
   border: 1px dotted white;
