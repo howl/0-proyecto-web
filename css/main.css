@@ -216,13 +216,35 @@ footer>p {
   flex-basis: 100%;
 }
 
-@media screen and (min-width: 600px) {
+/* Dispositivos móviles medianos */
+@media screen and (min-width: 576px) {
   .flexItem {
     flex-basis: calc(50% - 20px);
   }
 }
 
+/* Tablets */
 @media screen and (min-width: 768px) {
+  main section {
+    float: left;
+    width: 75%;
+    padding-right: 10px;
+    border-right: 1px dashed white;
+  }
+
+  main aside {
+    display: inline-block;
+    width: calc(25% - 20px);
+    padding: 10px;
+  }
+
+  .flexItem {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+/* Pantallas de escritorio pequeñas */
+@media screen and (min-width: 992px) {
   body {
     flex-flow: row wrap;
     align-items: flex-start;
@@ -271,29 +293,8 @@ footer>p {
   }
 }
 
-@media screen and (min-width: 1024px) {
-
-  main section {
-    float: left;
-    width: 75%;
-    padding-right: 10px;
-    border-right: 1px dashed white;
-  }
-
-  main aside {
-    display: inline-block;
-    width: calc(25% - 20px);
-    padding: 10px;
-  }
-}
-
+/* Pantallas de escritorio grandes */
 @media screen and (min-width: 1200px) {
-  .flexItem {
-    flex-basis: calc(33.33% - 20px);
-  }
-}
-
-@media screen and (min-width: 1500px) {
   .flexItem {
     flex-basis: calc(25% - 20px);
   }
